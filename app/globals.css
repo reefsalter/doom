@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.05;
+  }
+  15% {
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.05;
+  }
+  35% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  45% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  65% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  85% {
+    opacity: 0.05;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  95% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes textShadowFlicker {
+  0%,
+  100% {
+    text-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  }
+  25% {
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(255, 0, 0, 0.9);
+  }
+  75% {
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+  }
+}
+
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glitchEffect {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0
+      rgba(0, 0, 255, 0.75);
+  }
+}
+
+.flicker-overlay {
+  animation: flicker 8s infinite;
+}
+
+.countdown-unit {
+  animation: textShadowFlicker 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s infinite;
+}
+
+.glitch-text {
+  position: relative;
+  animation: glitchEffect 2.5s infinite;
+}
+
+body {
+  font-family: monospace;
+  background-color: black;
+  color: #ff3333;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #660000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #990000;
+}
